@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Manager">
+      <UniqueIdentifier>{1d05bc24-7d93-4867-80ed-4fb144070ade}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Process">
+      <UniqueIdentifier>{413bcceb-17c3-4f4a-9b5e-28abe68ce7ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Process\Engine">
+      <UniqueIdentifier>{58f42f5c-f376-4702-95fa-27540ba01ff8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Logger">
+      <UniqueIdentifier>{f5403250-6312-41ae-95e3-bb90496f8019}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Memory">
+      <UniqueIdentifier>{de546c20-7a2f-492b-bf55-6e3a44e303e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Struct">
+      <UniqueIdentifier>{697a2108-9934-492a-929f-51c07c58d6c8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="QE_Entrypoint.cpp" />
+    <ClCompile Include="QE_Engine_Process.cpp">
+      <Filter>Process\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="QE_Logger_Manager.cpp">
+      <Filter>Manager\Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="QE_Memory_Manager.cpp">
+      <Filter>Manager\Memory</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\includes\QE_Core\QE_IProcess.h">
+      <Filter>Process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\QE_Core\QE_Engine_Process.h">
+      <Filter>Process\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\QE_Core\QE_IManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\QE_Core\QE_Logger_Manager.h">
+      <Filter>Manager\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\QE_Core\QE_Memory_Manager.h">
+      <Filter>Manager\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\QE_Core\QE_Voxel_Struct.h">
+      <Filter>Struct</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\QE_Core\QE_Chunk_Struct.h">
+      <Filter>Struct</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\QE_Core\QE_Material_Struct.h">
+      <Filter>Struct</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

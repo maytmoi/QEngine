@@ -1,0 +1,8 @@
+# VS artefact
+*/.vs/
+
+# Binaries
+*/binaries/
+
+# Dependencies
+*/dependencies/
