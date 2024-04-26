@@ -113,14 +113,14 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)includes\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)includes\;$(SolutionDir)dependencies\GLM\glm\;$(SolutionDir)dependencies\GLFW\include\GLFW\;$(SolutionDir)dependencies\GLEW\include\GL\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;$(SolutionDir)dependencies\GLFWLIB\$(Platform)\glfw3.lib;$(SolutionDir)dependencies\GLEW\lib\$(Platform)\glew32s.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -132,7 +132,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)includes\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)includes\;$(SolutionDir)dependencies\GLM\glm\;$(SolutionDir)dependencies\GLFW\include\GLFW\;$(SolutionDir)dependencies\GLEW\include\GL\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -141,13 +141,15 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;$(SolutionDir)dependencies\GLFWLIB\$(Platform)\glfw3.lib;$(SolutionDir)dependencies\GLEW\lib\$(Platform)\glew32s.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="RDR_Renderer_Process.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\includes\RDR_Core\RDR_Camera_Struct.h" />
+    <ClInclude Include="..\includes\RDR_Core\RDR_Ray_Struct.h" />
     <ClInclude Include="..\includes\RDR_Core\RDR_Renderer_Process.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -7,7 +7,9 @@ namespace RDR
 		public QE::IProcess<RendererProcess>
 	{
 		friend class IProcess<RendererProcess>;
-	public:
+
+	private:
+		virtual int Entrypoint() override;
 
 	protected:
 		RendererProcess() : IProcess<RendererProcess>(std::string("Renderer")) { }
@@ -15,7 +17,5 @@ namespace RDR
 		RendererProcess operator=(const RendererProcess&) = delete;
 		~RendererProcess() = default;
 
-	private:
-		virtual void Entrypoint() override;
 	};
 }

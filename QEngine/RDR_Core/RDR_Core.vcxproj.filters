@@ -7,10 +7,25 @@
     <Filter Include="Process\Renderer">
       <UniqueIdentifier>{6307836c-aba6-4079-9432-915f348633d9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Struct">
+      <UniqueIdentifier>{b8f6ab43-de81-46ec-913e-e3c8eb7473dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpenGL">
+      <UniqueIdentifier>{857c66a6-83d9-4fa2-8d02-ae3ad80de99a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpenGL\Shaders">
+      <UniqueIdentifier>{47b873d6-fa0a-4550-9b9d-6cb69c0bfc8a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\includes\RDR_Core\RDR_Renderer_Process.h">
       <Filter>Process\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\RDR_Core\RDR_Ray_Struct.h">
+      <Filter>Struct</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\RDR_Core\RDR_Camera_Struct.h">
+      <Filter>Struct</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

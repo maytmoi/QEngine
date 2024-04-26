@@ -2,26 +2,38 @@
 
 #include "QE_Core\QE_Material_Struct.h"
 
-class Voxel
+namespace QE
 {
-	typedef unsigned int uint;
-public:
-	inline uint GetObjectId() { return mObjectID; }
-	inline void SetObjectId(uint iObjectID) { mObjectID = iObjectID; }
+	class Voxel
+	{
+		typedef unsigned int uint;
+	public:
+		inline uint GetObjectId() { return mObjectID; }
+		inline void SetObjectId(uint iObjectID) { mObjectID = iObjectID; }
 
-	inline Material GetMaterial() { return mMaterial; }
-	inline void SetMaterial(Material iMaterial) { mMaterial = iMaterial; }
+		inline Material GetMaterial() { return mMaterial; }
+		inline void SetMaterial(Material iMaterial) { mMaterial = iMaterial; }
 
-	inline float GetTemperature() { return mTemperature; }
-	inline void SetTemperature(float iTemperature) { mTemperature = iTemperature; }
+		inline float GetTemperature() { return mTemperature; }
+		inline void SetTemperature(float iTemperature) { mTemperature = iTemperature; }
 
-public:
-	Voxel() = default;
-	Voxel(const Voxel&) = default;
-	~Voxel() = default;
+	public:
 
-private:
-	uint mObjectID;		// Object owning that voxel
-	Material mMaterial;	// Material
-	float mTemperature; // Temperature
-};
+		Voxel() = delete;
+		Voxel(const Voxel&) = default;
+		Voxel(Material iMaterial, float iTemperature, uint iLevel) :
+			mObjectID(0),
+			mMaterial(iMaterial),
+			mTemperature(iTemperature),
+			mLevel(iLevel)
+		{ }
+		~Voxel() = default;
+
+	private:
+		uint mObjectID;		// Object owning that voxel
+		Material mMaterial;	// Material
+		float mTemperature; // Temperature
+
+		uint mLevel;		// Voxel level (size) in Octree, 0 to inf, leaf to root
+	};
+}

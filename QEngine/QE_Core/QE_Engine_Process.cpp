@@ -7,8 +7,9 @@
 
 namespace QE
 {
-	void EngineProcess::Entrypoint()
+	int EngineProcess::Entrypoint()
 	{
 		RDR::RendererProcess::GetProcess();
+		return 0;
 	}
 }

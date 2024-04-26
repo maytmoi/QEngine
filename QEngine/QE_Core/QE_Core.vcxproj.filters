@@ -57,5 +57,8 @@
     <ClInclude Include="..\includes\QE_Core\QE_Material_Struct.h">
       <Filter>Struct</Filter>
     </ClInclude>
+    <ClInclude Include="..\includes\QE_Core\QE_IConfigurable_Struct.h">
+      <Filter>Struct</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

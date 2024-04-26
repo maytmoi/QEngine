@@ -27,15 +27,15 @@ namespace QE
 	public:
 		void Log(const std::string& iMessage, const std::string& iFile, const std::string& iFunction, int iLine, loggerLevelEnum iLevel);
 
+	private:
+
+		void LogCount();
+
 	protected:
 		LoggerManager();
 		LoggerManager(const LoggerManager&) = delete;
 		LoggerManager operator=(const LoggerManager&) = delete;
 		~LoggerManager();
-
-	private:
-
-		void LogCount();
 
 	private:
 		std::ofstream mLogFile;

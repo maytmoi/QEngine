@@ -1,9 +1,29 @@
-Info : QE_Entrypoint.cpp(10) -> main()                       -> Main thread entrypoint entered, ID: 19808
-Info : QE_IProcess.h(55) -> ThreadEntrypoint()               -> Engine Process entrypoint entered, ID : 21260
-Info : QE_IProcess.h(55) -> ThreadEntrypoint()               -> Renderer Process entrypoint entered, ID : 10472
-Info : QE_IProcess.h(44) -> ~IProcess()                      -> Renderer Process is terminated successfully, duration :2000ms
-Info : QE_IProcess.h(44) -> ~IProcess()                      -> Engine Process is terminated successfully, duration :0ms
-Number of Debug logs: 0
-Number of Info  logs: 5
-Number of Warn  logs: 0
+Info : QE_Entrypoint.cpp(10) -> main()                       -> Main thread entrypoint entered, ID: 33448
+Info : QE_IProcess.h(54) -> ThreadEntrypoint()               -> Engine Process entrypoint entered, ID : 26096
+Info : QE_IProcess.h(54) -> ThreadEntrypoint()               -> Renderer Process entrypoint entered, ID : 25312
+Info : QE_IProcess.h(62) -> ThreadEntrypoint()               -> Engine Process has returned with code: 0, duration: 0ms
+Warn : RDR_Camera_Struct.h(52) -> UpdateParameters()         -> Temporary implementation, must be removed
+Debug: RDR_Camera_Struct.h(45) -> Render()                   -> Scene rendered, duration: 1965ms
+Debug: RDR_Camera_Struct.h(45) -> Render()                   -> Scene rendered, duration: 1899ms
+Debug: RDR_Camera_Struct.h(45) -> Render()                   -> Scene rendered, duration: 1905ms
+Debug: RDR_Camera_Struct.h(45) -> Render()                   -> Scene rendered, duration: 1925ms
+Debug: RDR_Camera_Struct.h(45) -> Render()                   -> Scene rendered, duration: 1889ms
+Debug: RDR_Camera_Struct.h(45) -> Render()                   -> Scene rendered, duration: 1900ms
+Debug: RDR_Camera_Struct.h(45) -> Render()                   -> Scene rendered, duration: 1897ms
+Debug: RDR_Camera_Struct.h(45) -> Render()                   -> Scene rendered, duration: 1906ms
+Debug: RDR_Camera_Struct.h(45) -> Render()                   -> Scene rendered, duration: 1884ms
+Debug: RDR_Camera_Struct.h(45) -> Render()                   -> Scene rendered, duration: 1897ms
+Debug: RDR_Camera_Struct.h(45) -> Render()                   -> Scene rendered, duration: 1897ms
+Debug: RDR_Camera_Struct.h(45) -> Render()                   -> Scene rendered, duration: 1912ms
+Debug: RDR_Camera_Struct.h(45) -> Render()                   -> Scene rendered, duration: 1896ms
+Debug: RDR_Camera_Struct.h(45) -> Render()                   -> Scene rendered, duration: 1896ms
+Debug: RDR_Camera_Struct.h(45) -> Render()                   -> Scene rendered, duration: 1895ms
+Debug: RDR_Camera_Struct.h(45) -> Render()                   -> Scene rendered, duration: 1899ms
+Debug: RDR_Camera_Struct.h(45) -> Render()                   -> Scene rendered, duration: 1914ms
+Info : QE_IProcess.h(62) -> ThreadEntrypoint()               -> Renderer Process has returned with code: 0, duration: 44052ms
+Info : QE_IProcess.h(43) -> ~IProcess()                      -> Renderer Process successfully joined the parent thread
+Info : QE_IProcess.h(43) -> ~IProcess()                      -> Engine Process successfully joined the parent thread
+Number of Debug logs: 17
+Number of Info  logs: 7
+Number of Warn  logs: 1
 Number of Error logs: 0

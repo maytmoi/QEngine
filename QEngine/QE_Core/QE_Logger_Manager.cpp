@@ -33,17 +33,6 @@ namespace QE
 		std::cout << std::left << std::setw(60) << wHeader << " -> " << iMessage << std::endl;
 	}
 
-	LoggerManager::LoggerManager()
-	{
-		mLogFile = std::ofstream("QELog.log");
-	}
-
-	LoggerManager::~LoggerManager()
-	{
-		LogCount();
-		mLogFile.close();
-	}
-
 	void LoggerManager::LogCount()
 	{
 		std::cout << std::endl;
@@ -63,5 +52,16 @@ namespace QE
 
 			std::cout << "Number of " << wLevel << " logs: " << mLogCount[wLogLevel] << std::endl;
 		}
+	}
+
+	LoggerManager::LoggerManager()
+	{
+		mLogFile = std::ofstream("QELog.log");
+	}
+
+	LoggerManager::~LoggerManager()
+	{
+		LogCount();
+		mLogFile.close();
 	}
 }

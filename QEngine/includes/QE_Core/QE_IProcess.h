@@ -26,13 +26,12 @@ namespace QE
 
 	protected:
 
-		virtual void Entrypoint() = 0;
+		virtual int Entrypoint() = 0;
 
 	protected:
 
 		IProcess(std::string iName) :
 			mName(iName),
-			mDuration(std::chrono::milliseconds(0)),
 			mThread(std::thread(&Derived::ThreadEntrypoint, static_cast<Derived*>(this))){ }
 		
 		IProcess() = delete;
@@ -41,7 +40,7 @@ namespace QE
 			if (mThread.joinable())
 			{
 				mThread.join();
-				LOG_INFO(Derived::GetProcess().GetProcessName() << " Process is terminated successfully, duration :" << mDuration);
+				LOG_INFO(Derived::GetProcess().GetProcessName() << " Process successfully joined the parent thread");
 			}
 			else
 			{
@@ -55,15 +54,16 @@ namespace QE
 			LOG_INFO(Derived::GetProcess().GetProcessName() << " Process entrypoint entered, ID : " << std::this_thread::get_id());
 			std::chrono::steady_clock::time_point wStartTime = std::chrono::high_resolution_clock::now();
 			
-			Entrypoint();
+			int wReturnCode = Entrypoint();
 
 			std::chrono::steady_clock::time_point wEndTime = std::chrono::high_resolution_clock::now();
-			mDuration = std::chrono::duration_cast<std::chrono::milliseconds>(wEndTime - wStartTime);
+			std::chrono::milliseconds wDuration = std::chrono::duration_cast<std::chrono::milliseconds>(wEndTime - wStartTime);
+
+			LOG_INFO(Derived::GetProcess().GetProcessName() << " Process has returned with code: " << wReturnCode << ", duration: " << wDuration);
 		}
 
 	protected:
 		std::string mName;
-		std::chrono::milliseconds mDuration;
 		std::thread mThread;
 	};
 }

@@ -27,6 +27,7 @@
   <ItemGroup>
     <ClInclude Include="..\includes\QE_Core\QE_Chunk_Struct.h" />
     <ClInclude Include="..\includes\QE_Core\QE_Engine_Process.h" />
+    <ClInclude Include="..\includes\QE_Core\QE_IConfigurable_Struct.h" />
     <ClInclude Include="..\includes\QE_Core\QE_IManager.h" />
     <ClInclude Include="..\includes\QE_Core\QE_IProcess.h" />
     <ClInclude Include="..\includes\QE_Core\QE_Logger_Manager.h" />
